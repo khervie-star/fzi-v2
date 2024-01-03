@@ -1,6 +1,14 @@
 import Image from "next/image";
 import { ArrowDownIcon } from "../public/assets/Icons";
 import { FaCirclePlay, FaInstagram, FaTwitter } from "react-icons/fa6";
+import iita from "../public/assets/Images/iita.png";
+import qct from "../public/assets/Images/qct.png";
+import harvest_plus from "../public/assets/Images/harvest_plus.png";
+import oyo from "../public/assets/Images/oyo.png";
+import aovc from "../public/assets/Images/aovc.png";
+
+const partner_logo =
+  "relative w-24 h-auto aspect-[1] object-contain text-center mx-auto";
 
 export default function Home() {
   return (
@@ -75,43 +83,27 @@ export default function Home() {
           </p>
           <div className="flex-1 h-[1px] bg-[#E5E5E5]" />
         </div>
-        <div className="flex items-center flex-wrap gap-[60px]">
+        <div className="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
+          <Image src={iita} alt="IITA" className={partner_logo} />
           <Image
-            src="/assets/Images/iita.png"
-            alt="IITA"
-            width={150}
-            height={100}
-          />
-          <Image
-            src="/assets/Images/qct.png"
+            src={qct}
             alt="Queen's Commonwealth Trust"
-            width={150}
-            height={100}
+            className={partner_logo}
           />
           <Image
-            src="/assets/Images/harvest_plus.png"
+            src={harvest_plus}
             alt="Harvest Plus"
-            width={150}
-            height={100}
+            className={partner_logo}
           />
+
+          <Image src={oyo} alt="Oyo State" className={partner_logo} />
+
           <Image
-            src="/assets/Images/oyo.png"
-            alt="Oyo State"
-            width={150}
-            height={100}
+            src={aovc}
+            alt="Assocition of Orphans and Vulnerable Children"
+            className={partner_logo}
           />
-          <Image
-            src="/assets/Images/aovc.png"
-            alt="Queen's Commonwealth Trust"
-            width={150}
-            height={100}
-          />
-          <Image
-            src="/assets/Images/oyo_state.png"
-            alt="Queen's Commonwealth Trust"
-            width={150}
-            height={100}
-          />
+          <Image src={iita} alt="IITA" className={partner_logo} />
         </div>
       </section>
     </main>

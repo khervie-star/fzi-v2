@@ -64,7 +64,7 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white">
+    <header className="bg-white border-b border-solid border-[rgba(0,0,0,0.4)] backdrop:blur-[15px]">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 font-outfit"
         aria-label="Global">
@@ -111,7 +111,7 @@ export default function Example() {
             Media
           </a>
           <a
-            href="#"
+            href="/contact"
             className="text-sm md:text-base font-semibold leading-6 text-gray-900">
             Contact
           </a>

@@ -2,7 +2,7 @@ import "./globals.css";
 
 import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
-import { Footer } from "../components";
+import { Events, Footer } from "../components";
 
 import { Outfit, Nunito_Sans } from "next/font/google";
 
@@ -34,6 +34,7 @@ export default function RootLayout({
       <body className={`${outfit.variable} ${nunito_sans.variable}`}>
         <Navbar />
         {children}
+        <Events />
         <Footer />
       </body>
     </html>

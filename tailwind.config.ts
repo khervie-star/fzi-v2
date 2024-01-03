@@ -13,12 +13,14 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         hero: "url('/assets/Images/schools.jpeg')",
+        donate_cta: "url('/assets/Images/donate_cta.png')",
       },
       colors: {
         fz_black: "#0B0706",
+        fz_black_2: "#1D2130",
         fz_maroon: "#670752",
         fz_text_grey: "#525560",
-        brandPink: "#F7038A",
+        fz_maroon_light: "#ECC3D8",
         brandGray: "#8A8B8A",
         brandGreen: "#0CF308",
       },
