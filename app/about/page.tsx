@@ -1,24 +1,25 @@
 import Image from "next/image";
 import React from "react";
 import { FaFacebook, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
+import { DonateCta } from "../../components";
 
 const About = () => {
   return (
     <>
       <section className="w-full bg-white">
         <div className="container mx-auto px-[20px] py-[32px] lg:p-[100px]">
-          <div className="flex lg:gap-[100px] font-outfit">
-            <div className="w-2/3">
+          <div className="flex flex-col lg:flex-row lg:gap-[100px] font-outfit">
+            <div className="w-full lg:w-2/3">
               <p className="section_title">Know About Us</p>
-              <h2 className="text-fz_black text-[56px] font-bold leading-[120%] mb-4">
+              <h2 className="text-fz_black text-[32px] lg:text-[56px] font-bold leading-[120%] mb-4">
                 We are a non-governmental organization
               </h2>
             </div>
-            <div className="w-1/3">
+            <div className="w-full lg:w-1/3">
               <p className="text-fz_black font-bold text-[20px] mb-2">
                 Our Objectives
               </p>
-              <ul className="text-fz_black/70 flex flex-col gap-3 list-disc">
+              <ul className="text-fz_black/70 flex flex-col gap-3 list-disc list-inside text-[14px] lg:text-base">
                 <li>
                   To enhance economic empowerment of communities where the
                   organization operates
@@ -48,12 +49,12 @@ const About = () => {
       </section>
       <section className="w-full bg-fz_maroon_light">
         <div className="container mx-auto px-[20px] py-[32px] lg:p-[100px]">
-          <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-[100px] font-outfit">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-[100px] font-outfit">
             <div className="">
               <p className="text-fz_black font-bold text-[20px] mb-2">
                 Our Vision
               </p>
-              <p className="text-fz_black/70">
+              <p className="text-fz_black/70 text-[14px] lg:text-base">
                 To combat hunger, poverty and illiteracy in communities.
               </p>
             </div>
@@ -61,7 +62,7 @@ const About = () => {
               <p className="text-fz_black font-bold text-[20px] mb-2">
                 Our Mission
               </p>
-              <p className="text-fz_black/70">
+              <p className="text-fz_black/70 text-[14px] lg:text-base">
                 To empower, educate and conduct researches to sustainably
                 enhance the lives people in the household and communities as
                 well as tackle critical social issues, promote peace and foster
@@ -72,7 +73,7 @@ const About = () => {
               <p className="text-fz_black font-bold text-[20px] mb-2">
                 Our Goal
               </p>
-              <p className="text-fz_black/70">
+              <p className="text-fz_black/70 text-[14px] lg:text-base">
                 To boost human productivity, enhance peace process among
                 families and promote development of communities through
                 dialogue, advocacy, sensitization, technology, arts, sports,
@@ -85,12 +86,12 @@ const About = () => {
 
       <section className="w-full bg-white">
         <div className="container mx-auto px-[20px] py-[32px] lg:p-[100px]">
-          <div className="w-full h-full bg-fz_maroon text-white rounded-[20px]  lg:p-16 flex items-center lg:gap-12">
-            <div className="flex-1">
+          <div className="w-full h-full bg-fz_maroon text-white rounded-[8px] lg:rounded-[20px] p-6 lg:p-16 flex flex-col lg:flex-row items-center lg:gap-12">
+            <div className="w-full flex-1">
               <h6 className="text-[20px] font-semibold mb-3 font-outfit">
                 The Context of our Work
               </h6>
-              <p className="leading-[160%] font-nunito_sans">
+              <p className="leading-[160%] font-nunito_sans text-[13px] lg:text-base">
                 Frontida Zois Initiative got its name from Greek origin, meaning
                 Life Care- Initiative. It is a community based non-governmental
                 charity organization, founded in 2019 and registered with
@@ -120,7 +121,7 @@ const About = () => {
             <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-fz_black_2 font-outfit dark:text-white">
               Meet our team
             </h2>
-            <p className="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+            <p className="font-light text-gray-500 text-[14px] lg:text-base dark:text-gray-400">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam,
               itaque illum! Voluptates aut dolor quibusdam a maxime, dolorem,
             </p>
@@ -130,7 +131,7 @@ const About = () => {
               <img
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
                 src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
-                alt="Bonnie Avatar"
+                alt="Petra O. Ogunfowokan"
               />
               <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 <a href="#">Petra O. Ogunfowokan</a>
@@ -253,29 +254,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="w-full bg-white">
-        <div className="container mx-auto px-[20px] py-[32px] lg:p-[100px]">
-          <div className="relative w-full h-[350px] lg:h-[500px] bg-donate_cta bg-no-repeat bg-center bg-cover rounded-[20px] font-outfit lg:p-16 flex items-center lg:gap-12">
-            <div className="overlay absolute w-full h-full top-0 left-0 bg-[rgba(0,0,0,0.75)] rounded-[20px]" />
-            <div className="relative w-full h-full flex justify-center items-center text-center">
-              <div>
-                <h6 className="text-[48px] text-white font-bold font-outfit mb-3 w-[75%] mx-auto">
-                  You can contribute to provide a place for children with
-                  special needs!
-                </h6>
-                <div className="w-full flex justify-center gap-6 mt-10">
-                  <button className="rounded-md px-4 lg:px-7 py-3 bg-fz_maroon text-white font-semibold">
-                    Join as a volunteer
-                  </button>
-                  <button className="rounded-md px-4 lg:px-7 py-3 bg-white text-fz_maroon font-semibold">
-                    Donate
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <DonateCta />
     </>
   );
 };

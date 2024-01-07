@@ -19,13 +19,13 @@ const Contact = () => {
     <>
       <section className="w-full bg-fz_maroon_light">
         <div className="w-full container mx-auto px-[20px] py-[32px] lg:p-[100px]">
-          <div className="flex lg:gap-[100px] font-outfit">
+          <div className="flex flex-col lg:flex-row lg:gap-[100px] font-outfit">
             <div className="flex-1">
               <p className="section_title">Contact Us</p>
-              <h2 className="text-fz_black text-[56px] font-bold leading-[120%] mb-4">
+              <h2 className="text-fz_black text-[32px] lg:text-[56px] font-bold leading-[120%] mb-4">
                 We&apos;d love to hear from you
               </h2>
-              <p className="text-[#1D2130]/70 leading-[160%]">
+              <p className="text-[#1D2130]/70 leading-[160%] text-[13px] lg:text-base mb-6">
                 Have any question in mind or want to enquire? Please feel free
                 to contact us through the form or the following details.
               </p>
@@ -33,10 +33,10 @@ const Contact = () => {
             <div className="flex-1">
               <div className="flex flex-col gap-[20px] lg:gap-[32px]">
                 <div>
-                  <h6 className="text-[#1D2130] text-[24px] font-bold mb-[10px]">
+                  <h6 className="text-[#1D2130] text-[20px] lg:text-[24px] font-bold mb-[10px]">
                     Let&apos;s talk!{" "}
                   </h6>
-                  <div className="flex flex-row gap-5 items-center text-fz_text_grey">
+                  <div className="flex flex-col lg:flex-row gap-3 lg:gap-5 justify-start items-start lg:items-center text-fz_text_grey text-[14px] lg:text-base">
                     <div className="flex items-center gap-2">
                       <FaPhone />
                       <Link href={"tel:8180746707"}>+234(818) 074 6704</Link>
@@ -50,18 +50,18 @@ const Contact = () => {
                   </div>
                 </div>
                 <div>
-                  <h6 className="text-[#1D2130] text-[24px] font-bold mb-[10px]">
+                  <h6 className="text-[#1D2130] text-[20px] lg:text-[24px] font-bold mb-[10px]">
                     Head Office
                   </h6>
-                  <p className="text-base text-fz_text_grey">
+                  <p className="text-[14px] lg:text-base text-fz_text_grey">
                     8 Brewery Drive, Lagos, Nigeria.
                   </p>
                 </div>
                 <div>
-                  <h6 className="text-[#1D2130] text-[24px] font-bold  mb-[10px]">
+                  <h6 className="text-[#1D2130] text-[20px] lg:text-[24px] font-bold mb-[10px]">
                     Branch Office
                   </h6>
-                  <p className="text-base text-fz_text_grey">
+                  <p className="text-[14px] lg:text-base text-fz_text_grey">
                     Opp Opolo round about, Yenagoa, Bayelsa, Nigeria
                   </p>
                 </div>
@@ -90,7 +90,7 @@ const Contact = () => {
         <div className="w-full lg:w-[65%] container mx-auto px-[20px] py-[32px] lg:p-[100px]">
           <form>
             <div className="w-full flex flex-col lg:flex-row items-center lg:gap-5 mb-6">
-              <div className="flex-1">
+              <div className="w-full flex-1 mb-6 lg:mb-0">
                 <input
                   type="text"
                   name="firstName"
@@ -98,7 +98,7 @@ const Contact = () => {
                   className={input}
                 />
               </div>
-              <div className="flex-1">
+              <div className="w-full flex-1">
                 <input
                   type="text"
                   name="lastName"
@@ -108,7 +108,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="w-full flex flex-col lg:flex-row items-center lg:gap-5 mb-6">
-              <div className="flex-1">
+              <div className="w-full flex-1 mb-6 lg:mb-0">
                 <input
                   type="email"
                   name="email"
@@ -116,7 +116,7 @@ const Contact = () => {
                   className={input}
                 />
               </div>
-              <div className="flex-1">
+              <div className="w-full flex-1">
                 <input
                   type="text"
                   name="subject"
