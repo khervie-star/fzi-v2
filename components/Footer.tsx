@@ -56,20 +56,27 @@ export const Footer = () => {
                 <ul className="flex flex-col gap-3">
                   <p className={subtitle_header}>Connect</p>
                   <li className={sub_item}>
-                    <Link href={"https://fb.me/FZInitiative"}>Facebook</Link>
+                    <Link target="_blank" href={"https://fb.me/FZInitiative"}>
+                      Facebook
+                    </Link>
                   </li>
                   <li className={sub_item}>
-                    <Link href={"https://twitter.com/FZ_Initiative"}>
+                    <Link
+                      target="_blank"
+                      href={"https://twitter.com/FZ_Initiative"}>
                       Twitter
                     </Link>
                   </li>
                   <li className={sub_item}>
-                    <Link href={"https://instagram.com/fz_initiative"}>
+                    <Link
+                      target="_blank"
+                      href={"https://instagram.com/fz_initiative"}>
                       Instagram
                     </Link>
                   </li>
                   <li className={sub_item}>
                     <Link
+                      target="_blank"
                       href={
                         "https://www.youtube.com/@frontidazoisinitiative7159"
                       }>
