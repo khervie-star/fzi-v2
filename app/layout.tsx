@@ -22,7 +22,7 @@ const nunito_sans = Nunito_Sans({
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "/",
+    canonical: "https://fzi-v2.vercel.app/",
     languages: {
       "en-US": "/en-US",
     },
@@ -32,18 +32,18 @@ export const metadata: Metadata = {
     description:
       "To boost human productivity, enhance peace process among families and promote development of communities through dialogue, advocacy, sensitization, technology, arts, sports, culture and data driven approaches.",
     url: "",
-    siteName: "Glory Tabernacle Ministry",
+    siteName: "Frontida Zois Initiative",
     images: [
       {
-        url: "/assets/Images/schools.jpeg", // Must be an absolute URL
+        url: "https://fzi-v2.vercel.app/assets/Images/schools.jpeg", // Must be an absolute URL
         width: 800,
         height: 600,
       },
       {
-        url: "/assets/Images/schools.jpeg", // Must be an absolute URL
+        url: "https://fzi-v2.vercel.app/assets/Images/schools.jpeg", // Must be an absolute URL
         width: 1800,
         height: 1600,
-        alt: "Glory Tabernacle Ministry",
+        alt: "Frontida Zois Initiative",
       },
     ],
     locale: "en_US",
