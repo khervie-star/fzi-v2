@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import { Tab } from "@headlessui/react";
 import { FaCopy } from "react-icons/fa6";
+import toast, { Toaster } from "react-hot-toast";
 
 const Donate = () => {
   return (
@@ -42,28 +45,54 @@ const Donate = () => {
                   <p className="font-bold text-[20px]">Bank Name</p>
                   <div className="flex items-center gap-2">
                     <p>Sterling Bank</p>
-                    <FaCopy className="text-[#2a952ab1] cursor-pointer" />
+                    <FaCopy
+                      className="text-[#2a952ab1] cursor-pointer"
+                      onClick={() => {
+                        navigator.clipboard.writeText("Sterling Bank");
+                        toast.success("Bank name copied");
+                      }}
+                    />
                   </div>
                 </div>
                 <div>
                   <p className="font-bold text-[20px]">Bank Account Number</p>
                   <div className="flex items-center gap-2">
                     <p>0501618615</p>
-                    <FaCopy className="text-[#2a952ab1] cursor-pointer" />
+                    <FaCopy
+                      className="text-[#2a952ab1] cursor-pointer"
+                      onClick={() => {
+                        navigator.clipboard.writeText("0501618615");
+                        toast.success("Account number copied");
+                      }}
+                    />
                   </div>
                 </div>
                 <div>
                   <p className="font-bold text-[20px]">Account Name</p>
                   <div className="flex items-center gap-2">
-                    <p>Frontida Zois Initiative </p>
-                    <FaCopy className="text-[#2a952ab1] cursor-pointer" />
+                    <p>Frontida Zois Initiative</p>
+                    <FaCopy
+                      className="text-[#2a952ab1] cursor-pointer"
+                      onClick={() => {
+                        navigator.clipboard.writeText(
+                          "Frontida Zois Initiative"
+                        );
+                        toast.success("Account name copied");
+                      }}
+                    />
                   </div>
                 </div>
                 <div>
                   <p className="font-bold text-[20px]">Bank Account Type</p>
                   <div className="flex items-center gap-2">
                     <p>Current</p>
-                    <FaCopy className="text-[#2a952ab1] cursor-pointer" />
+                    <FaCopy
+                      className="text-[#2a952ab1] cursor-pointer"
+                      onClick={() => {
+                        navigator.clipboard.writeText("Current");
+                        toast.success("Account type copied");
+                      }}
+                    />
                   </div>
                 </div>
               </div>
@@ -92,29 +121,6 @@ const Donate = () => {
                   society.
                 </li>
               </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="w-full bg-white">
-        <div className="container mx-auto px-[20px] py-[32px] lg:p-[100px]">
-          <div className="relative w-full h-[350px] lg:h-[500px] bg-donate_cta bg-no-repeat bg-center bg-cover rounded-[20px] font-outfit lg:p-16 flex items-center lg:gap-12">
-            <div className="overlay absolute w-full h-full top-0 left-0 bg-[rgba(0,0,0,0.75)] rounded-[20px]" />
-            <div className="relative w-full h-full flex justify-center items-center text-center">
-              <div>
-                <h6 className="text-[48px] text-white font-bold font-outfit mb-3 w-[75%] mx-auto">
-                  You can contribute to provide a place for children with
-                  special needs!
-                </h6>
-                <div className="w-full flex justify-center gap-6 mt-10">
-                  <button className="rounded-md px-4 lg:px-7 py-3 bg-fz_maroon text-white font-semibold">
-                    Join as a volunteer
-                  </button>
-                  <button className="rounded-md px-4 lg:px-7 py-3 bg-white text-fz_maroon font-semibold">
-                    Donate
-                  </button>
-                </div>
-              </div>
             </div>
           </div>
         </div>

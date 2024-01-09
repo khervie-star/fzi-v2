@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { ArrowDownIcon } from "../public/assets/Icons";
 import {
@@ -12,6 +14,7 @@ import harvest_plus from "../public/assets/Images/harvest_plus.png";
 import oyo from "../public/assets/Images/oyo.png";
 import aovc from "../public/assets/Images/aovc.png";
 import { DonateCta } from "../components";
+import CountUp from "react-countup";
 
 const partner_logo =
   "relative w-24 h-auto aspect-[1] object-contain text-center mx-auto";
@@ -32,6 +35,12 @@ const programmes = [
     time: "Sunday, 8am - 9am",
     img: "",
   },
+];
+
+const stats = [
+  { id: 1, name: "Direct Beneficiaries", value: 451, plus: true },
+  { id: 2, name: "Indirect Beneficiaries", value: 7000, plus: true },
+  { id: 3, name: "Volunteers", value: 6, plus: false },
 ];
 
 export default function Home() {
@@ -63,77 +72,81 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full container mx-auto px-[20px] py-[32px] lg:p-[100px]">
-        <div className="flex flex-col lg:flex-row items-center gap-8">
-          <div className="w-full lg:w-3/5">
-            <p className="section_title">Know About Us</p>
-            <h2></h2>
-            <p className="font-light font-outfit mb-10 text-[13px] md:text-base">
-              Hunger, poverty and illiteracy appear very glaring as you move
-              from urban to rural communities in Nigeria. All these became more
-              intensified with Covid-19 Pandemic, Economic Melt-down Natural
-              Disasters like flood overflow, Insurgencies and other emergencies
-              in the society. All of these amount to overwhelming pressure on
-              the well-being of the poor and vulnerable.
-              <br />
-              <br />
-              Resulting from low response to the needs of the poor and
-              vulnerable- we are responding to cost of inaction resulting to
-              problems such as hooliganism, human trafficking, smuggling of
-              migrants, Drug Abuse, insurgencies, kidnapping, arm robbery,
-              fraud, and other social ills in Nigeria.
-              <br />
-              <br />
-              Ultimately, at Frontida Zois Initiative we aim to enable the
-              future of Nigeria and Africa at large to be well cared for,
-              protected and empowered to nurture economic and productive
-              citizens of tomorrow by equipping the future today.
-            </p>
-            <button className="bg-fz_maroon text-white border-none rounded-md px-6 py-2 font-medium">
-              Learn more{" "}
-            </button>
-          </div>
-          <div className="w-full lg:w-2/5">
-            <div className="w-full lg:w-[90%] h-[350px] lg:h-[580px] rounded-[20px] relative">
-              <div className="overlay absolute w-full h-full top-0 left-0 bg-[rgba(0,0,0,0.75)] rounded-[20px]" />
+      <section className="w-full bg-[#fafafa]">
+        <div className="container mx-auto px-[20px] py-[32px] lg:p-[100px]">
+          <div className="flex flex-col lg:flex-row items-center gap-8">
+            <div className="w-full lg:w-3/5">
+              <p className="section_title">Know About Us</p>
+              <h2></h2>
+              <p className="font-light font-outfit mb-10 text-[13px] md:text-base">
+                Hunger, poverty and illiteracy appear very glaring as you move
+                from urban to rural communities in Nigeria. All these became
+                more intensified with Covid-19 Pandemic, Economic Melt-down
+                Natural Disasters like flood overflow, Insurgencies and other
+                emergencies in the society. All of these amount to overwhelming
+                pressure on the well-being of the poor and vulnerable.
+                <br />
+                <br />
+                Resulting from low response to the needs of the poor and
+                vulnerable- we are responding to cost of inaction resulting to
+                problems such as hooliganism, human trafficking, smuggling of
+                migrants, Drug Abuse, insurgencies, kidnapping, arm robbery,
+                fraud, and other social ills in Nigeria.
+                <br />
+                <br />
+                Ultimately, at Frontida Zois Initiative we aim to enable the
+                future of Nigeria and Africa at large to be well cared for,
+                protected and empowered to nurture economic and productive
+                citizens of tomorrow by equipping the future today.
+              </p>
+              <button className="bg-fz_maroon text-white border-none rounded-md px-6 py-2 font-medium">
+                Learn more{" "}
+              </button>
+            </div>
+            <div className="w-full lg:w-2/5">
+              <div className="w-full lg:w-[90%] h-[350px] lg:h-[580px] rounded-[20px] relative">
+                <div className="overlay absolute w-full h-full top-0 left-0 bg-[rgba(0,0,0,0.75)] rounded-[20px]" />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="w-full container mx-auto px-[20px] py-8 lg:p-[100px]">
-        <div className="my-8 flex items-center gap-6">
-          <p className="font-nunito_sans font-bold leading-[normal] tracking-[2px] uppercase text-[#1D2130]">
-            Our partners
-          </p>
-          <div className="flex-1 h-[1px] bg-[#E5E5E5]" />
-        </div>
-        <div className="grid gap-6 lg:gap-16 grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
-          <Image src={iita} alt="IITA" className={partner_logo} />
-          <Image
-            src={qct}
-            alt="Queen's Commonwealth Trust"
-            className={partner_logo}
-          />
-          <Image
-            src={harvest_plus}
-            alt="Harvest Plus"
-            className={partner_logo}
-          />
+      <section className="w-full bg-[#fafafa]">
+        <div className="container mx-auto px-[20px] py-[32px] lg:p-[100px]">
+          <div className="my-8 flex items-center gap-6">
+            <p className="font-nunito_sans font-bold leading-[normal] tracking-[2px] uppercase text-[#1D2130]">
+              Our partners
+            </p>
+            <div className="flex-1 h-[1px] bg-[#E5E5E5]" />
+          </div>
+          <div className="grid gap-6 lg:gap-16 grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
+            <Image src={iita} alt="IITA" className={partner_logo} />
+            <Image
+              src={qct}
+              alt="Queen's Commonwealth Trust"
+              className={partner_logo}
+            />
+            <Image
+              src={harvest_plus}
+              alt="Harvest Plus"
+              className={partner_logo}
+            />
 
-          <Image src={oyo} alt="Oyo State" className={partner_logo} />
+            <Image src={oyo} alt="Oyo State" className={partner_logo} />
 
-          <Image
-            src={aovc}
-            alt="Assocition of Orphans and Vulnerable Children"
-            className={partner_logo}
-          />
-          <Image src={iita} alt="IITA" className={partner_logo} />
+            <Image
+              src={aovc}
+              alt="Assocition of Orphans and Vulnerable Children"
+              className={partner_logo}
+            />
+            <Image src={iita} alt="IITA" className={partner_logo} />
+          </div>
         </div>
       </section>
 
       <section className="w-full bg-fz_maroon_light">
-        <div className="container mx-auto px-[20px] lg:p-[100px]">
+        <div className="container mx-auto px-[20px] py-[32px] lg:p-[100px]">
           <div className="mb-8">
             <p className="font-nunito_sans font-bold leading-[normal] tracking-[2px] uppercase text-[#1D2130]">
               What We Do{" "}
@@ -141,7 +154,7 @@ export default function Home() {
           </div>
           <div className="w-full flex flex-col lg:flex-row lg:gap-[50px]">
             <div className="w-full lg:w-2/3">
-              <h2 className="text-[48px] text-fz_black_2 font-bold mb-4 font-nunito_sans">
+              <h2 className="text-[24px] lg:text-[48px] text-fz_black_2 font-bold mb-4 font-nunito_sans leading-[1]">
                 Thematic Areas
               </h2>
               <p className="text-[#525560] mb-8 font-nunito_sans">
@@ -298,6 +311,34 @@ export default function Home() {
             <span>More projects</span>
             <FaArrowRightLong />{" "}
           </button>
+        </div>
+      </section>
+
+      <section>
+        <div className="bg-white py-24 sm:py-32 pb-0 sm:pb-6">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+              {stats.map((stat) => (
+                <div
+                  key={stat.id}
+                  className="mx-auto flex max-w-xs flex-col gap-y-4">
+                  <dt className="text-base leading-7 text-gray-600 font-nunito_sans">
+                    {stat.name}
+                  </dt>
+                  <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl font-outfit">
+                    <CountUp end={stat.value} duration={2.75}>
+                      {({ countUpRef, start }) => (
+                        <div>
+                          <span ref={countUpRef} />
+                          {stat.plus && <span onClick={start}> +</span>}
+                        </div>
+                      )}
+                    </CountUp>
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
         </div>
       </section>
       <DonateCta />
